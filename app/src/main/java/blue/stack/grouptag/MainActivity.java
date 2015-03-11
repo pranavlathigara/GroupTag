@@ -20,15 +20,21 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         TagGroup tagGroup= (TagGroup) findViewById(R.id.tags);
         List<ITag> tags=new ArrayList<>();
-for (int i=0;i<5;i++){
-  //  tags.add(new MyTag("i"+i));
 
-}
 
         tagGroup.setAppendMode(true);
         tagGroup.setSelectMode(false);
-        tagGroup.setTagsList(tags);
+       tagGroup.setTagsList(tags);
         tagGroup.setBrightColor(Color.RED);
+        TagGroup tagGroup2= (TagGroup) findViewById(R.id.tags2);
+        for (int i=0;i<5;i++){
+           tags.add(new MyTag("i"+i));
+
+        }
+        tagGroup2.setAppendMode(false);
+        tagGroup2.setSelectMode(true);
+        tagGroup2.setTagsList(tags);
+        tagGroup2.setBrightColor(Color.RED);
     }
 
 

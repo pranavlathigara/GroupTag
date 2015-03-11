@@ -41,9 +41,7 @@ import blue.stack.grouptag.R;
  * is not focusable.
  * </p>
  *
- * @author Jun Gu (http://2dxgujun.com)
- * @version 1.0
- * @since 2015-2-3 14:16:32
+
  */
 public class TagGroup extends ViewGroup {
     private final int default_bright_color = Color.rgb(0x49, 0xC1, 0x20);

@@ -9,8 +9,16 @@
 <blue.stack.grouptag.lib.TagGroup
     android:id="@+id/tags"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
 
 </blue.stack.grouptag.lib.TagGroup>
+    <blue.stack.grouptag.lib.TagGroup
+        android:id="@+id/tags2"
+        android:layout_below="@id/tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </blue.stack.grouptag.lib.TagGroup>
 </RelativeLayout>
