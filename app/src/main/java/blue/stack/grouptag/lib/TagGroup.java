@@ -702,8 +702,10 @@ public class TagGroup extends ViewGroup {
                     final TagView checkedTagView = getCheckedTagView();
                     if (checkedTagView != null) {
                         checkedTagView.setChecked(false);
+                    }else{
+                         clickedTagView.setChecked(true);
                     }
-                    clickedTagView.setChecked(true);
+                   
                 }
             }
         }
