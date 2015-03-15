@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Grouptag by bunnyblue</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Grouptag</h1>
+        <h2>Android  Group Tag</h2>
+        <a href="https://github.com/bunnyblue/GroupTag" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="androidtaggroup" class="anchor" href="#androidtaggroup" aria-hidden="true"><span class="octicon octicon-link"></span></a>AndroidTagGroup</h1>
+
+<p>The AndroidTagGroup is a layout for a set of tags.You can use it to group people, books or anything you want.</p>
+
+<p>Also you can contribute new idea to me.</p>
+
+<h1>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h1>
+
+<h3>
+<a id="screenshot" class="anchor" href="#screenshot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshot</h3>
+
+<p><img src="http://ww2.sinaimg.cn/large/bce2dea9gw1epouvl2mvuj20dw0ehmyb.jpg" alt="Demo screenshot"></p>
+
+<h3>
+<a id="append-tag" class="anchor" href="#append-tag" aria-hidden="true"><span class="octicon octicon-link"></span></a>Append Tag</h3>
+
+<p><img src="http://ww4.sinaimg.cn/large/bce2dea9gw1epouw5y9ijj20dw06dt8x.jpg" alt="Append mode"></p>
+
+<h3>
+<a id="delete-tag" class="anchor" href="#delete-tag" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delete tag</h3>
+
+<p><img src="http://ww3.sinaimg.cn/large/bce2dea9gw1epouweadrqj20dw05dglt.jpg" alt="Delete tag"></p>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<h2>
+<a id="step-1" class="anchor" href="#step-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1</h2>
+
+<p>Use it in your own code:</p>
+
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">me</span>.gujun.android.taggroup.TagGroup
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>@+id/tag_group<span class="pl-pds">"</span></span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s1"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s1"><span class="pl-pds">"</span>wrap_content<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<div class="highlight highlight-java"><pre><span class="pl-stj">TagGroup</span> mTagGroup <span class="pl-k">=</span> (<span class="pl-stj">TagGroup</span>) findViewById(<span class="pl-stj">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>tag_group);
+mTagGroup<span class="pl-k">.</span>setTags(<span class="pl-k">new</span> <span class="pl-stj">String</span>[]{<span class="pl-s1"><span class="pl-pds">"</span>Tag1<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>Tag2<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>Tag3<span class="pl-pds">"</span></span>});</pre></div>
+
+<p>Use <code>setTags(...)</code> to set the initial tags in the group.</p>
+
+<p>To "submit" a new tag as user press "Enter" or tap the blank area of the tag group, also you can "submit" a new tag via <code>submitTag()</code>.
+To delete a tag as user press "Backspace" or double-tap the tag which you want to delete.</p>
+
+<p><strong>Note</strong>: Google keyboard (a few soft keyboard not honour the key event) currently not supported "Enter" key to "submit" a new tag and "Backspace" key to delete a tag.</p>
+
+<p>I made some pre-design style. You can use them via <code>style</code> property.</p>
+
+<p><img src="http://ww4.sinaimg.cn/large/bce2dea9gw1epouwn8og4j20dw0a5aal.jpg" alt="Present color"></p>
+
+<p>Use the present style just like below:</p>
+
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">blue</span>.stack.grouptag.lib.TagGroup
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>@+id/tag_group<span class="pl-pds">"</span></span>
+    <span class="pl-e">style</span>=<span class="pl-s1"><span class="pl-pds">"</span>@style/TagGroup.Beauty_Red<span class="pl-pds">"</span></span>/&gt;</pre></div>
+
+<p>In the above picture, the style is:</p>
+
+<p><code>TagGroup</code>
+<code>TagGroup.Beauty_Red</code>
+<code>TagGroup.Holo_Dark</code>
+<code>TagGroup.Light_Blue</code>
+<code>TagGroup.Indigo</code></p>
+
+<p>You can get more beautiful color from <a href="https://color.adobe.com">Adobe Color CC</a>, and you can also contribute your color style to AndroidTagGroup!</p>
+
+<h1>
+<a id="build" class="anchor" href="#build" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build</h1>
+
+<p>run <code>./gradlew assembleDebug</code> (Mac/Linux)</p>
+
+<p>or</p>
+
+<p>run <code>gradlew.bat assembleDebug</code> (Windows)</p>
+
+<h1>
+<a id="attributes" class="anchor" href="#attributes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Attributes</h1>
+
+<p>There are several attributes you can set:</p>
+
+<p><img src="http://ww2.sinaimg.cn/large/bce2dea9gw1epov0i8x6kj20rk054q4g.jpg" alt="Dimension illustrate"></p>
+
+<table>
+<thead>
+<tr>
+<th align="center">attr</th>
+<th align="center">default</th>
+<th align="center">mean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">isAppendMode</td>
+<td align="center">false</td>
+<td align="center">Determine the TagGroup mode, APPEND or single DISPLAY.</td>
+</tr>
+<tr>
+<td align="center">inputTagHint</td>
+<td align="center">Add Tag/添加标签</td>
+<td align="center">Hint of the INPUT state tag.</td>
+</tr>
+<tr>
+<td align="center">brightColor</td>
+<td align="center">#49C120</td>
+<td align="center">The bright color of the tag.</td>
+</tr>
+<tr>
+<td align="center">dimColor</td>
+<td align="center">#AAAAAA</td>
+<td align="center">The dim color of the tag.</td>
+</tr>
+<tr>
+<td align="center">borderStrokeWidth</td>
+<td align="center">0.5dp</td>
+<td align="center">The tag outline border stroke width.</td>
+</tr>
+<tr>
+<td align="center">textSize</td>
+<td align="center">13sp</td>
+<td align="center">The tag text size.</td>
+</tr>
+<tr>
+<td align="center">horizontalSpacing</td>
+<td align="center">8dp</td>
+<td align="center">The horizontal tag spacing.(Mark1)</td>
+</tr>
+<tr>
+<td align="center">verticalSpacing</td>
+<td align="center">4dp</td>
+<td align="center">The vertical tag spacing.(Mark2)</td>
+</tr>
+<tr>
+<td align="center">horizontalPadding</td>
+<td align="center">12dp</td>
+<td align="center">The horizontal tag padding.(Mark3)</td>
+</tr>
+<tr>
+<td align="center">verticalPadding</td>
+<td align="center">3dp</td>
+<td align="center">The vertical tag padding.(Mark4)</td>
+</tr>
+</tbody>
+</table>
+
+<h1>
+<a id="developed-by" class="anchor" href="#developed-by" aria-hidden="true"><span class="octicon octicon-link"></span></a>Developed By</h1>
+
+<p><a href="http://weibo.com/315777520">
+  <img alt="Follow me on Weibo" src="http://ww4.sinaimg.cn/large/bce2dea9gw1epjhk9h9m6j20230233yb.jpg">
+</a></p>
+
+<h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h1>
+
+<pre><code>Copyright 2015 Jun Gu
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/bunnyblue/GroupTag/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/bunnyblue/GroupTag/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/bunnyblue/GroupTag"></a> is maintained by <a href="https://github.com/bunnyblue">bunnyblue</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
